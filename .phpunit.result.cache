@@ -1,0 +1,1 @@
+{"version":1,"defects":{"Tests\\Feature\\UserTest::testRegisterSuccess":7,"Tests\\Feature\\UserTest::testRegisterEmailExists":7},"times":{"Tests\\Feature\\UserTest::testRegisterSuccess":0.122,"Tests\\Feature\\UserTest::testRegisterValidationError":0.068,"Tests\\Feature\\UserTest::testRegisterEmailExists":0.13}}
