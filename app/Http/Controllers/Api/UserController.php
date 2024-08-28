@@ -50,7 +50,7 @@ class UserController extends Controller
             ], 401));
         }
 
-        $user["token"] = $user->createToken("auth_token")->plainTextToken;
+        $user["token"] = $user->createToken("auth-token")->plainTextToken;
 
         Log::info("User logged in successfully " . json_encode($user, JSON_PRETTY_PRINT));
         return (new UserResource($user, true, 200, "User logged in successfully"))->response();

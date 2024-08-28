@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -15,9 +16,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::post('/user/register', [UserController::class, 'register']);
-Route::post('/user/login', [UserController::class, 'login']);
+Route::post("/user/register", [UserController::class, "register"])->name("register");
+Route::post("/user/login", [UserController::class, "login"])->name("login");
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::middleware('auth:sanctum')->group(function () {
+
+    Route::middleware('admin')->group(function () {
+        Route::post("/category", [CategoryController::class, "create"]);
+        Route::put("/category/{id}", [CategoryController::class, "update"]);
+        Route::delete("/category/{id}", [CategoryController::class, "delete"]);
+    });
+
+    Route::get("/categories", [CategoryController::class, "getAll"]);
 });
