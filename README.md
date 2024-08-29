@@ -1,4 +1,10 @@
-## Laravel 10 RESTful API
+## Laravel 10 RESTful API with Sanctum
+
+### Docs
+
+- [User Docs](docs/user-docs.md)
+- [Category Docs](docs/category-docs.md)
+- [Product Docs](docs/product-docs.md)
 
 ### Endpoint
 
