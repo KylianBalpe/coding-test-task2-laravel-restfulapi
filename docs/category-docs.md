@@ -17,7 +17,7 @@
 
 #### Response
 
-- `200`
+- `201`
     ```json
     {
         "ok": true,
@@ -64,7 +64,6 @@
 
 ### Endpoint: `POST /api/categories`
 
-    Content-Type: application/json
     Authorization: Bearer token
 
 #### Response

@@ -70,6 +70,14 @@ php artisan migrate
 php artisan test
 ```
 
+#### Seed the database (if not using unit test)
+
+```bash
+php artisan db:seed
+```
+
+Seed user with admin role
+
 #### Start the local development server
 
 ```bash

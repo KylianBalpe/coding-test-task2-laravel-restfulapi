@@ -18,7 +18,7 @@
 
 #### Response
 
-- `200`
+- `201`
     ```json
     {
         "ok": true,
