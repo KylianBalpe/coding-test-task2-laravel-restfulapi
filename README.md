@@ -83,3 +83,10 @@ Seed user with admin role
 ```bash
 php artisan serve
 ```
+
+### Authentication Admin Role
+
+```
+email: admin@example.com
+password: password
+```
