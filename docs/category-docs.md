@@ -1,6 +1,6 @@
 # Category Docs
 
-## Create
+## Create Category
 
 ### Endpoint: `POST /api/category`
 
@@ -60,7 +60,7 @@
     }
     ```
 
-## List
+## List Category
 
 ### Endpoint: `POST /api/categories`
 
@@ -91,7 +91,7 @@
     }
     ```
 
-## Update
+## Update Category
 
 ### Endpoint: `PUT /api/category/{id}`
 
@@ -151,7 +151,7 @@
     }
     ```
 
-## Delete
+## Delete Category
 
 ### Endpoint: `DELETE /api/category/{id}`
 

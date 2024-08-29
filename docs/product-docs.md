@@ -1,6 +1,6 @@
 # Product Docs
 
-## Create
+## Create Product
 
 ### Endpoint: `POST /api/product`
 
@@ -84,7 +84,7 @@
     }
     ```
 
-## Update
+## Update Product
 
 ### Endpoint: `PUT /api/product/{id}`
 
@@ -218,9 +218,9 @@
     }
     ```
 
-## Delete
+## Delete Product
 
-### Endpoint: `Deleye /api/product/{id}`
+### Endpoint: `DELETE /api/product/{id}`
 
     Content-Type: application/json
     Authorization: Bearer token (admin role)
@@ -272,9 +272,9 @@
 
 ### Query Parameters
 
-- `category`: string
-- `min_price`: integer
-- `max_price`: integer
+- `category`: string (optional)
+- `min_price`: integer (optional)
+- `max_price`: integer (optional)
 
 #### Response
 
