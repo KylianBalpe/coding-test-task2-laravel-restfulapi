@@ -23,8 +23,8 @@ class UserController extends Controller
             throw new HttpResponseException(response([
                 "ok" => false,
                 "status" => 400,
-                "message" => "Username already exists"
-            ], 400));
+                "message" => "Email already exists",
+            ])->setStatusCode(400));
         }
 
         $data["password"] = bcrypt($data["password"]);
@@ -46,8 +46,8 @@ class UserController extends Controller
             throw new HttpResponseException(response([
                 "ok" => false,
                 "status" => 401,
-                "message" => "Email or password is invalid"
-            ], 401));
+                "message" => "Email or password is incorrect",
+            ])->setStatusCode(401));
         }
 
         $user["token"] = $user->createToken("auth-token")->plainTextToken;

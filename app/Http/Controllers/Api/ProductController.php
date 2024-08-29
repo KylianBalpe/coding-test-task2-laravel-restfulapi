@@ -49,10 +49,7 @@ class ProductController extends Controller
             throw new HttpResponseException(response()->json([
                 "ok" => false,
                 "status" => 404,
-                "message" => "Not found",
-                "errors" => [
-                    "Category not found"
-                ],
+                "message" => "Category not found",
             ])->setStatusCode(404));
         }
 
@@ -94,10 +91,7 @@ class ProductController extends Controller
             throw new HttpResponseException(response()->json([
                 "ok" => false,
                 "status" => 404,
-                "message" => "Not found",
-                "errors" => [
-                    "Product not found"
-                ],
+                "message" => "Product not found",
             ])->setStatusCode(404));
         }
 
@@ -157,10 +151,7 @@ class ProductController extends Controller
             throw new HttpResponseException(response()->json([
                 "ok" => false,
                 "status" => 404,
-                "message" => "Not found",
-                "errors" => [
-                    "Product not found"
-                ],
+                "message" => "Product not found",
             ])->setStatusCode(404));
         }
 

@@ -87,10 +87,7 @@ class ProductTest extends TestCase
             ->assertJson([
                 "ok" => false,
                 "status" => 404,
-                "message" => "Not found",
-                "errors" => [
-                    "Category not found"
-                ]
+                "message" => "Category not found",
             ]);
     }
 
@@ -168,10 +165,7 @@ class ProductTest extends TestCase
             ->assertJson([
                 "ok" => false,
                 "status" => 404,
-                "message" => "Not found",
-                "errors" => [
-                    "Product not found"
-                ]
+                "message" => "Product not found",
             ]);
     }
 
@@ -234,10 +228,7 @@ class ProductTest extends TestCase
             ->assertJson([
                 "ok" => false,
                 "status" => 404,
-                "message" => "Not found",
-                "errors" => [
-                    "Product not found"
-                ]
+                "message" => "Product not found",
             ]);
     }
 
@@ -264,10 +255,7 @@ class ProductTest extends TestCase
             ->assertJson([
                 "ok" => false,
                 "status" => 404,
-                "message" => "Not found",
-                "errors" => [
-                    "Category not found"
-                ]
+                "message" => "Category not found",
             ]);
     }
 
@@ -349,10 +337,7 @@ class ProductTest extends TestCase
             ->assertJson([
                 "ok" => false,
                 "status" => 404,
-                "message" => "Not found",
-                "errors" => [
-                    "Product not found"
-                ]
+                "message" => "Product not found",
             ]);
     }
 

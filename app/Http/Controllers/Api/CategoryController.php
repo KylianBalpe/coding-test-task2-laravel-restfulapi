@@ -8,6 +8,7 @@ use App\Http\Requests\UpdateCategoryRequest;
 use App\Http\Resources\CategoryCollection;
 use App\Http\Resources\CategoryResource;
 use App\Models\Category;
+use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
@@ -46,11 +47,11 @@ class CategoryController extends Controller
         $category = Category::find($id);
         if (!$category) {
             Log::error("Category not found");
-            return response()->json([
+            throw new HttpResponseException(response()->json([
                 "ok" => false,
                 "status" => 404,
-                "message" => "Category not found"
-            ], 404);
+                "message" => "Category not found",
+            ])->setStatusCode(404));
         }
 
         $category->update($data);
@@ -69,11 +70,11 @@ class CategoryController extends Controller
         $category = Category::find($id);
         if (!$category) {
             Log::error("Category not found");
-            return response()->json([
+            throw new HttpResponseException(response()->json([
                 "ok" => false,
                 "status" => 404,
-                "message" => "Category not found"
-            ], 404);
+                "message" => "Category not found",
+            ])->setStatusCode(404));
         }
 
         $category->delete();

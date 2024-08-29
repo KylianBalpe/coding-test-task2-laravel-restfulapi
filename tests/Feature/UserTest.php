@@ -8,6 +8,7 @@ use Tests\TestCase;
 
 class UserTest extends TestCase
 {
+
     public function testRegisterValidationError()
     {
         $this->post("/api/user/register", [
@@ -38,7 +39,7 @@ class UserTest extends TestCase
             ->assertJson([
                 "ok" => false,
                 "status" => 400,
-                "message" => "Username already exists",
+                "message" => "Email already exists",
             ]);
     }
 
@@ -105,7 +106,7 @@ class UserTest extends TestCase
             ->assertJson([
                 "ok" => false,
                 "status" => 401,
-                "message" => "Email or password is invalid",
+                "message" => "Email or password is incorrect",
             ]);
     }
 }

@@ -40,6 +40,8 @@ class CategoryTest extends TestCase
             "name" => "",
         ])->assertStatus(422)
             ->assertJson([
+                "ok" => false,
+                "status" => 422,
                 "message" => "Validation error",
                 "errors" => [
                     "name" => [
