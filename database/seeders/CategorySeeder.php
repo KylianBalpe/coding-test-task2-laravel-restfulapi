@@ -6,6 +6,7 @@ use App\Models\Category;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 
 class CategorySeeder extends Seeder
 {
@@ -14,10 +15,15 @@ class CategorySeeder extends Seeder
      */
     public function run(): void
     {
-        for ($i = 1; $i <= 10; $i++) {
-            Category::create([
-                "name" => "Category $i",
-            ]);
-        }
+        $category = [
+            [
+                "name" => "Electronics",
+            ],
+            [
+                "name" => "Clothing and Accessories",
+            ],
+        ];
+
+        DB::table('categories')->insert($category);
     }
 }

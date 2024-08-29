@@ -90,7 +90,7 @@ class CategoryTest extends TestCase
 
         Log::info(json_encode($response, JSON_PRETTY_PRINT));
 
-        self::assertCount(10, $response["data"]);
+        self::assertCount(2, $response["data"]);
     }
 
     public function testGetAllCategoriesUnauthenticated()
