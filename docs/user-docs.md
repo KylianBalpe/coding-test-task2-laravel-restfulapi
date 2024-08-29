@@ -2,11 +2,11 @@
 
 ## Register
 
-### Endpoint: `/api/user/register`
+### Endpoint: `POST /api/user/register`
+
+`Content-Type: application/json`
 
 #### Request body
-
-Content-Type: application/json
 
 ```json
 {
@@ -60,11 +60,11 @@ Content-Type: application/json
 
 ## Login
 
-### Endpoint: `/api/user/login`
+### Endpoint: `POST /api/user/login`
+
+`Content-Type: application/json`
 
 #### Request body
-
-Content-Type: application/json
 
 ```json
 {
